@@ -238,24 +238,6 @@
     ></script>
 
     <script type="text/javascript">
-      //brisanje u slucaju neispravnog unosa
-      $(document).ready(function () {
-        $("#prosledi").on("click", function () {
-          $("#ime").val("");
-          $("#korisnickoIme").val("");
-          $("#lozinka").val("");
-          $("#lozinkaPotvrda").val("");
-        });
-      });
-
-      //brisanje u slucaju neispravnog unosa
-      $(document).ready(function () {
-        $("#log").on("click", function () {
-          $("#username").val("");
-          $("#password").val("");
-        });
-      });
-
       //logika logovanja na stranicu uz AJAX
       function Login() {
         var u = $("#username");
@@ -275,7 +257,7 @@
               if (data == "ERROR") {
                 alert("Neuspesno ste se prijavili!");
               } else {
-                alert("Uspesno");
+                window.location = "main.html";
               }
             },
           });
